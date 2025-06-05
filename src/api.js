@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://atria-sop-generator.onrender.com"; // your live backend URL
+const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 export const generateSOP = async (payload) => {
   const res = await axios.post(`${BASE_URL}/generate`, payload);
